@@ -1,0 +1,4 @@
+#!/usr/bin/env perl
+
+use Test::Common;
+Test::Common->run;
