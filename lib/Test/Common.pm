@@ -10,8 +10,9 @@ package Test::Common;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
+use App::Cmd 0.311;
 use YAML::XS 0.35;
 use File::Share 0.01;
 use File::Copy 2.14;
