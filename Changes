@@ -1,4 +1,9 @@
 ---
+version: 0.03
+date:    Sun Jul  3 19:15:19 EDT 2011
+changes:
+- Major rewrite
+---
 version: 0.02
 date:    Wed Jun 29 18:00:02 EDT 2011
 changes:

@@ -1,13 +1,15 @@
 use Test::More;
 use File::Find;
 
-# Module::Package example for find
+my %skip = map {($_, 1)} qw{[% skip.join(' ') %]};
+
 my @modules = ();
 File::Find::find(sub {
     return unless -f $_ and $_ =~ /\.pm$/;
     my $module = $File::Find::name;
     $module =~ s!lib[\/\\](.*)\.pm$!$1!;
     $module =~ s!/+!::!g;
+    return if $skip{$module};
     push @modules, $module;
 }, 'lib');
 

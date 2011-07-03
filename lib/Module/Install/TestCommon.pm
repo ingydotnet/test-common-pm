@@ -6,22 +6,21 @@
 # copyright: 2011
 
 use 5.008003;
-package Module::Install::ManifestSkip;
+package Module::Install::TestCommon;
 use strict;
 use warnings;
 
 use base 'Module::Install::Base';
 
-our $VERSION = '0.01';
+our $VERSION = '0.03';
 our $AUTHOR_ONLY = 1;
 
-my $skip_file = "MANIFEST.SKIP";
-
-sub use_test_common {
+sub test_common_update {
     my $self = shift;
     return unless $self->is_admin;
+    system("test-common update") == 0 or die $!;
     require Test::Common;
-    Test::Common::update();
+    $self->clean_files(Test::Common::clean_files());
 }
 
 1;

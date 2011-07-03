@@ -1,2 +1,5 @@
-- name: use_ok.t
-  skip: []
+sources:
+- Test-Common
+t:
+- test: use_ok.t
+clean: all
