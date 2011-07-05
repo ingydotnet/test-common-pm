@@ -9,9 +9,10 @@ use 5.008003;
 package Test::Common;
 use Mouse 0.93 ();
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use App::Cmd 0.311 ();
+use IO::All 0.41 ();
 use YAML::XS 0.35 ();
 use File::Share 0.01 ();
 use File::Copy 2.14 ();
