@@ -1,4 +1,9 @@
 ---
+version: 0.05
+date:    Tue Jul  5 22:54:36 EDT 2011
+changes:
+- Add MouseX::App::Cmd to deps
+---
 version: 0.04
 date:    Mon Jul  4 23:52:09 EDT 2011
 changes:

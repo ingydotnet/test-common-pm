@@ -9,8 +9,9 @@ use 5.008003;
 package Test::Common;
 use Mouse 0.93 ();
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
+use MouseX::App::Cmd 0.08 ();
 use App::Cmd 0.311 ();
 use IO::All 0.41 ();
 use YAML::XS 0.35 ();
