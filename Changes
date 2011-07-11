@@ -1,4 +1,9 @@
 ---
+version: 0.06
+date:    Mon Jul 11 14:32:31 CDT 2011
+changes:
+- Add abstracts to list and clean
+---
 version: 0.05
 date:    Tue Jul  5 22:54:36 EDT 2011
 changes:

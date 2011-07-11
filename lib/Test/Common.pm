@@ -9,7 +9,7 @@ use 5.008003;
 package Test::Common;
 use Mouse 0.93 ();
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 use MouseX::App::Cmd 0.08 ();
 use App::Cmd 0.311 ();
@@ -77,6 +77,7 @@ Test::Common->import( -command );
 extends 'Test::Common::Command';
 
 sub abstract { return "Create a new Test::Common '$conf_file' file" }
+use constant usage_desc => 'test-common config';
 
 has force => (
     is => 'ro',
@@ -107,6 +108,7 @@ use IO::All;
 use Template::Toolkit::Simple;
 
 use constant abstract => 'Update Test::Common test files';
+use constant usage_desc => 'test-common update';
 
 has source_dirs => (
     is => 'ro',
@@ -175,6 +177,9 @@ use Mouse;
 Test::Common->import( -command );
 extends 'Test::Common::Command';
 
+use constant abstract => 'List test files';
+use constant usage_desc => 'test-common list';
+
 sub execute {
     my ($self, $opt, $args) = @_;
     print "$_\n" for Test::Common::list();
@@ -185,6 +190,9 @@ package Test::Common::Command::clean;
 use Mouse;
 Test::Common->import( -command );
 extends 'Test::Common::Command';
+
+use constant abstract => 'Remove generated test files';
+use constant usage_desc => 'test-common clean';
 
 sub execute {
     my ($self, $opt, $args) = @_;
