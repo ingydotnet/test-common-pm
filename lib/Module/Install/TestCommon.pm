@@ -12,7 +12,7 @@ use warnings;
 
 use base 'Module::Install::Base';
 
-our $VERSION = '0.03';
+our $VERSION = '0.07';
 our $AUTHOR_ONLY = 1;
 
 sub test_common_update {

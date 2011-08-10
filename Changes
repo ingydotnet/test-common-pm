@@ -1,4 +1,9 @@
 ---
+version: 0.07
+date:    Wed Aug 10 17:26:54 CEST 2011
+changes:
+- Make M:I:TC version match TC
+---
 version: 0.06
 date:    Mon Jul 11 14:32:31 CDT 2011
 changes:
